@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+body{
+    font-family: 'Montserrat';
+
+}
+
+.main_website{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.8fr 0.7fr 8.5fr 5fr 2fr 2fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo logo logo logo"
+      "navbar navbar navbar navbar"
+      "main-section main-section main-section main-section";
+      min-height:100vh;
+  }
+
+  .logo{
+    grid-area: logo;
+    text-align: center;
+    padding-top: 1vh;
+    justify-content: center;
+    display: flex;
+  }
+
+  h1{
+    font-family: 'Lato';
+  }
+
+  html{
+    scroll-behavior: smooth;
+  }
+
+  nav{
+    grid-area: navbar;
+    display:flex;
+    background-color: #000;
+    
+    text-align: center;
+    justify-content: center;
+    color:#fff;
+    
+  }
+
+  .navlist{
+    margin: 20px;  
+  }
+
+  .navlist li{
+  display: inline;
+  margin-right: 70px;
+  
+  
+  }
+  .navlist li a{
+    color:#fff;
+  }
+  .navlist li a:hover{
+    color:red;
+  }
+
+  .main-section{
+    grid-area: main-section;
+  }
+
+  
+
+  @media (max-width:600px){
+
+    .main_website{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.3fr 2.78fr 5fr 2fr 2fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo"
+      "navbar"
+      "main section";
+      min-height: 100vh;
+          }
+  
+
+    .navlist ul{
+        margin-top: 4%;
+    }
+    
+    h1{
+    text-align: center;
+    padding-top: 2%;
+    }
+    
+        .navlist li{
+            font-size: 0.7rem;
+            margin-right: 1rem;
+            
+        }
+
+.main-section{
+  grid-area: main-section;
+}
+  }
